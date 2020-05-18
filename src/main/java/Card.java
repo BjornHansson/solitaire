@@ -104,24 +104,6 @@ public abstract class Card {
         return new ImageIcon(url).getImage();
     }
 
-    public String getImageRankString(int rank) {
-        String str;
-        switch (rank) {
-            case 11:
-                str = "j";
-                break;
-            case 12:
-                str = "q";
-                break;
-            case 13:
-                str = "k";
-                break;
-            default:
-                str = Integer.toString(rank);
-        }
-        return str;
-    }
-
     /**
      * Checks if two cards intersects at all
      * 
@@ -156,7 +138,7 @@ class Club extends Card {
         super(rank);
 
         try {
-            Image face = createImage("c" + getImageRankString(rank));
+            Image face = createImage("c" + rank);
             setFace(face);
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -169,7 +151,7 @@ class Diamond extends Card {
         super(rank);
 
         try {
-            Image face = createImage("d" + getImageRankString(rank));
+            Image face = createImage("d" + rank);
             setFace(face);
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -182,7 +164,7 @@ class Heart extends Card {
         super(rank);
 
         try {
-            Image face = createImage("h" + getImageRankString(rank));
+            Image face = createImage("h" + rank);
             setFace(face);
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -195,7 +177,7 @@ class Spade extends Card {
         super(rank);
 
         try {
-            Image face = createImage("s" + getImageRankString(rank));
+            Image face = createImage("s" + rank);
             setFace(face);
         } catch (MalformedURLException e) {
             e.printStackTrace();
