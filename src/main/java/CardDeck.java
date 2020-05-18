@@ -8,7 +8,6 @@ public class CardDeck extends CardPile {
         for (int i = 1; i <= DECK_SIZE; i++) {
             Card card = createCard(i);
             add(card);
-            System.out.println("created card " + card.getClass().getSimpleName() + card.getRank());
         }
     }
 
