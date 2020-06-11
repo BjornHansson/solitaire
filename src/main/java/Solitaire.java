@@ -2,8 +2,8 @@
 
 import javax.swing.JFrame;
 
-public class Solitare extends JFrame {
-    public Solitare() {
+public class Solitaire extends JFrame {
+    public Solitaire() {
         add(new GameArea());
         setTitle("Klondike Solitaire");
         setSize(750, 750);
@@ -12,6 +12,6 @@ public class Solitare extends JFrame {
     }
 
     public static void main(String[] arg) {
-        new Solitare();
+        new Solitaire();
     }
 }
